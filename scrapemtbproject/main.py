@@ -16,31 +16,107 @@ class Ride:
 # create mtb project feature set
 class MtbProjectFeatureSet:
     def __init__(self):
-
         self.__dict__ = {
-            "displayFieldName": "<displayFieldName>",
+            "displayFieldName": "title",
+            "hasZ": true,
+            "hasM": true,
             "fieldAliases": {
-                "<fieldName1>": "<fieldAlias1>",
-                "<fieldName2>": "<fieldAlias2>"
+                "OBJECTID": "OBJECTID",
+                "id": "ID",
+                "title": "Title",
+                "diff": "Difficulty",
+                "score": "Score",
+                "summary": "Abstract",
+                "surface": "Surface",
+                "isComposite": "Composite",
+                "isRace": "Race",
+                "isSegment": "Segment",
+                "length": "Length",
+                "rideTrail": "Ride",
+                "SHAPE_Length": "SHAPE_Length"
             },
-            "geometryType": "<geometryType>",
-            "hasZ": True,
-            "hasM": False,
-            "spatialReference": {'wkid': 3857},
+            "geometryType": "esriGeometryPolyline",
+            "spatialReference": {
+                "wkid": 102100,
+                "latestWkid": 3857,
+                "vcsWkid": 115700,
+                "latestVcsWkid": 115700
+            },
             "fields": [
                 {
-                    "name": "diff",
-                    "type": "STRING",
-                    "alias": "Difficulty"
+                    "name": "OBJECTID",
+                    "type": "esriFieldTypeOID",
+                    "alias": "OBJECTID"
                 },
                 {
-                    "name": "<field2>",
-                    "type": "<field2Type>",
-                    "alias": "<field2Alias>"
+                    "name": "id",
+                    "type": "esriFieldTypeSmallInteger",
+                    "alias": "ID"
+                },
+                {
+                    "name": "title",
+                    "type": "esriFieldTypeString",
+                    "alias": "Title",
+                    "length": 100
+                },
+                {
+                    "name": "diff",
+                    "type": "esriFieldTypeString",
+                    "alias": "Difficulty",
+                    "length": 50
+                },
+                {
+                    "name": "score",
+                    "type": "esriFieldTypeSmallInteger",
+                    "alias": "Score"
+                },
+                {
+                    "name": "summary",
+                    "type": "esriFieldTypeString",
+                    "alias": "Abstract",
+                    "length": 5000
+                },
+                {
+                    "name": "surface",
+                    "type": "esriFieldTypeString",
+                    "alias": "Surface",
+                    "length": 50
+                },
+                {
+                    "name": "isComposite",
+                    "type": "esriFieldTypeSmallInteger",
+                    "alias": "Composite"
+                },
+                {
+                    "name": "isRace",
+                    "type": "esriFieldTypeSmallInteger",
+                    "alias": "Race"
+                },
+                {
+                    "name": "isSegment",
+                    "type": "esriFieldTypeSmallInteger",
+                    "alias": "Segment"
+                },
+                {
+                    "name": "length",
+                    "type": "esriFieldTypeDouble",
+                    "alias": "Length"
+                },
+                {
+                    "name": "rideTrail",
+                    "type": "esriFieldTypeSmallInteger",
+                    "alias": "Ride"
+                },
+                {
+                    "name": "SHAPE_Length",
+                    "type": "esriFieldTypeDouble",
+                    "alias": "SHAPE_Length"
                 }
             ],
-            "features": []
+            "features": [
+            ]
         }
+
 
 # create mtbproject scraper
 class MtbProjectScraper:
